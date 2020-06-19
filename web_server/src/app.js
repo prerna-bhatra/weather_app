@@ -14,7 +14,16 @@ app.set('view engine','hbs')
 //app.set('views',viewspath)
 hbs.registerPartials(partialspath)
 app.use(express.static(publicpath))
+
 app.get('',(req,res)=>
+{
+	res.render('index',{
+		title:'weather',
+		name:'prerna'
+	});
+})
+
+app.get('/weather',(req,res)=>
 {
 /*	res.render('index',{
 		title:'weather',
